@@ -1,0 +1,85 @@
+
+  <header>
+    <div style="background-color:rgb(24, 62, 133); display: flex;    align-items: center;
+    justify-content: space-between;">
+      <div>
+      <img src="./assets/perfeqta-light-logo.png" width="150" height="50" >
+
+     
+    <mat-form-field style="padding: 3%; margin-left: -6%" >
+      <mat-label>users</mat-label>
+      <select matNativeControl required>
+        <option value="malav">Malav</option>
+        <option value="Gautam">Gautam</option>
+        <option value="Setu">Setu</option>
+        <option value="Punit">Punit</option>
+      </select>
+    </mat-form-field >
+  </div>
+  <div>
+    <mat-icon aria-hidden="false" aria-label="Example settings icon" fontIcon="settings" style="color: white; margin-bottom: -3%;"  (click)="onclick9()"></mat-icon>
+    <div class="dropdown">
+      <button class="dropbtn" style="position: relative;"><mat-icon style="margin-bottom: -5%;">person</mat-icon>Malav Patel
+        </button>
+      <div class="dropdown-content">
+        <a href="#">Log Out<mat-icon aria-hidden="false" aria-label="Example Import icon" fontIcon="output"  style="margin-bottom: -5%;"></mat-icon></a>   
+      </div>
+    </div>
+  </div>
+  </div>
+</header>
+
+<div class="left">
+  <form action="">
+<ul class="nav flex-column">
+  <li class="nav-item" (click)="onclick()" >
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" ></mat-icon><br>
+    <span>Home</span><mat-drawer-container>
+    </mat-drawer-container>
+    
+   </li><br>
+  
+  <li class="nav-item"  (click)="onclick1()">
+    <mat-icon aria-hidden="false" aria-label="Example drag indicator icon" fontIcon="assignment ind"></mat-icon><br>
+    <span>Space</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick2()">
+    <mat-icon aria-hidden="false" aria-label="Example search icon" fontIcon="search"></mat-icon><br>
+    <span>Search</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick3()">
+    <mat-icon aria-hidden="false" aria-label="Example schedule icon" fontIcon="schedule"></mat-icon><br>
+    <span >Schedule</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick4()">
+    <mat-icon aria-hidden="false" aria-label="Example tasks icon" fontIcon="tasks"></mat-icon><br>
+    <span >Tasks</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick5()">
+    <mat-icon aria-hidden="false" aria-label="Example Import icon" fontIcon="output"></mat-icon><br>
+    <span >Import</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick6()">
+    <mat-icon aria-hidden="false" aria-label="Example workflow icon" fontIcon="lan"></mat-icon><br>
+    <span >Smart Workflow</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick7()">
+    <mat-icon aria-hidden="false" aria-label="Example  summary icon" fontIcon="work history"></mat-icon><br>
+    <span >Activity Summary</span>
+  </li><br>
+
+  <li class="nav-item" (click)="onclick8()">
+    <mat-icon aria-hidden="false" aria-label="Example  dashboard icon" fontIcon=" dashboard"></mat-icon><br>
+    <span >Report Dashboard</span>
+  </li><br>
+</ul></form></div>
+<div class="right">
+  <router-outlet></router-outlet>
+</div>
+

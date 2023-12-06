@@ -1,0 +1,53 @@
+<div class="login-container">
+	<div class="img-content">
+	
+	  <div class="desk-img">
+		<img src="./assets/Screenshot 2023-11-21 175416.png" alt="">
+	  </div>
+	</div>
+  
+	<div class="center-box-login">
+	  
+	  <div class="login-bx">
+		<div *ngIf="showChangePasswordConfirm">
+		  <img src="./assets/Approved-Perfeqta-Logo.png" title="PERFEQTA DMS">
+		  <h1>Sign in to <span style="color:blue">PERFEQTA</span> </h1><br>
+		</div>
+	
+
+		<form [formGroup]= "loginForm" (ngSubmit)="onSubmit(loginForm.value,txtusername.value, txtpassword.value)">
+		  
+			<mat-label>Username*</mat-label>
+			<input type="text" matInput formControlName="username" #txtusername >
+			<mat-error *ngIf= "loginForm.get('username')?.hasError('required') && (loginForm.get('username')?.touched ||isSubmitted)"
+			  class="Red_Color">
+			  <strong>Username required</strong>
+			</mat-error>
+		  <br>
+		  
+			 
+			<mat-label>Password<em>*</em></mat-label>
+			<input matInput [type]="showPassword? 'text' : 'password' " formControlName="password"  #txtpassword required >
+			 <!-- <mat-icon matSuffix (click)="togglePasswordVisibility()">
+			  {{showPassword?'visibility_off':'visibility'}}
+			 </mat-icon>  -->
+			<mat-error *ngIf= " loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.touched ||isSubmitted) "
+			  class="Red_Color">
+			  <strong>Password required</strong>
+			</mat-error>
+			<mat-error *ngIf= "loginForm.get('password')?.hasError('pattern') && (loginForm.get('password')?.touched ||isSubmitted)"
+			  class="Red_Color">
+			  <strong>Please Enter Strong Password </strong>
+			</mat-error><br>
+		  
+  
+		  <a class="forgotpassword" routerLink="/forgot-password" style="color: #2140ce;">Forgot Password? </a>
+  
+		  <div class="login-btn-bx">
+			<button class="btn btn-primary" type="submit" >Sign in to PERFEQTA</button>
+		  </div>
+		  
+		</form>
+	  </div>
+	</div>
+  </div>

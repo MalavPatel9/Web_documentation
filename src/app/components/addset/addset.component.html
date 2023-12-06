@@ -1,0 +1,45 @@
+
+
+<header style="background-color: antiquewhite ; text-align: center;"><h1>Add Set</h1></header>
+
+
+
+<div class="card"><div class="card-body">
+<h4 style="color: blue;"><b>Set Details</b></h4>
+<form [formGroup]="addForm"  (ngSubmit)="onSubmit()">
+
+    <mat-label>Set Name*</mat-label><br>
+    <input type="text" matInput formControlName="setName" placeholder="Enter Set Name Here" maxlength="50">
+    <mat-error *ngIf= "addForm.get('setName')?.hasError('required') && (addForm.get('setName')?.touched ||isSubmitted)"
+    class="Red_Color">
+    <strong>Set Name is  required</strong>
+  </mat-error><br>
+
+
+  <mat-label>Set Value*</mat-label><br>
+    <input type="text" matInput formControlName="setValue" placeholder="Add Set Value Here" maxlength="50">
+    <mat-error *ngIf= "addForm.get('setValue')?.hasError('required') && (addForm.get('setValue')?.touched ||isSubmitted)"
+    class="Red_Color">
+    <strong>Set Value is  required</strong>
+  </mat-error><br>
+
+
+  <button class="btn btn-primary" type="submit" >Save</button>
+
+  <mat-button-toggle type="button"  (click)="onReset()">Cancel</mat-button-toggle><br>
+
+  
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

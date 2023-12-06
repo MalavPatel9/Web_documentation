@@ -1,0 +1,53 @@
+<div style="background-color: azure;">
+<header style="background-color: antiquewhite ; text-align: center;"><h1>Home</h1></header>
+
+
+
+
+<div class="row mt-2  col" style="margin-left: 50px; margin-right: 50px;"  >
+
+  <div class="component1 col" *ngFor="let d of dataSource" ><mat-card class="card1"><div class="card" style="height: 100%; width: 100%;" >
+    
+      <div class="card-body" >
+        <h3 class="card-title" [ngClass]="{'orange':d.title==='Records Pending My Approval',
+                                            'blue':d.title==='Records assigned To me',
+                                            'black':d.title==='Draft-Records',
+                                            'green':d.title==='Records you accessed today',
+                                            'brown':d.title==='My flagged Records'}">{{d.title}}</h3>
+        <p class="card-text">{{d.text}}</p>
+      
+      </div>  <span class="Events">{{d.Events}}</span>
+    </div></mat-card>
+  </div>
+
+  <br>
+
+
+
+<div class="graph">
+
+  <mat-card class="chart">
+  <div class="card" ><div class="card-body">
+   <app-chart-bar></app-chart-bar></div></div></mat-card>
+  
+   
+   <mat-card class="spline">
+   <div class="card" style="height: 100%;"><div class="card-body">
+   <app-spline></app-spline></div></div></mat-card> 
+  
+</div>
+
+
+
+  </div>
+
+</div>
+
+          
+
+
+
+
+
+
+
