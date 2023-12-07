@@ -34,7 +34,7 @@ import { ExpenseGuard } from './expense.guard';
 import { ExpenseEntryComponent } from './expense-entry/expense-entry.component';
 import { ExpenseEntryListComponent } from './expense-entry-list/expense-entry-list.component';
 import { AdministrationComponent } from './components/administration/administration.component';
-import { DxButtonModule } from 'devextreme-angular';
+import { DxButtonModule, DxDataGridModule } from 'devextreme-angular';
 import { DxChartModule } from 'devextreme-angular';
 import { ChartBarComponent } from './charts/chart-bar/chart-bar.component';
 import { Home1Component } from './home-1/home-1.component';
@@ -44,6 +44,7 @@ import { AddsetComponent } from './components/addset/addset.component';
 import { SetlistComponent } from './components/sets/setlist/setlist.component';
 import { SetsComponent } from './components/sets/sets.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { DxDataGridComponent } from 'devextreme-angular';
 
 
 
@@ -73,7 +74,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     SplineComponent,
     AddsetComponent,
     SetlistComponent,
-    SetsComponent
+    SetsComponent,
+    
     
    
     
@@ -104,7 +106,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     DxButtonModule,
     DxChartModule,
     DxPieChartModule,
-    MatExpansionModule
+    MatExpansionModule,
+    DxDataGridModule
     
 
   ],

@@ -13,8 +13,20 @@ export class AddsetService {
   console.log(this.arr)
   }
 
+  updatesetData(id:number,addForm:any){
+     this.arr.splice(id,1,addForm)
+  }
+
   getarr(){
     let list=this.arr
     return list
   }
+  
+  getSetIdbyIndex(i:number){
+    return this.arr[i]
+  }
+   
+  
+
+
 }

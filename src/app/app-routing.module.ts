@@ -116,7 +116,12 @@ const routes: Routes = [
 {
   path:'setlist',
   component:SetlistComponent
-}]
+},
+{
+path:'edit/:i',
+component:AddsetComponent
+}
+]
    
   },
   

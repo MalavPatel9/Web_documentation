@@ -1,23 +1,30 @@
-<div  class="pgbody">
- <header style="background-color: antiquewhite ; text-align: center;"><h1>Sets</h1></header>
- <div class="set">
-   <button class="btn btn-primary" (click)="onclick()">Add set</button>
- </div><br>
+<div class="pgbody">
+  <header style="background-color: antiquewhite ; text-align: center;">
+    <h1>Sets</h1>
+  </header>
+  <div class="set">
+    <button class="btn btn-primary" (click)="onclick()">Add set</button>
+  </div><br>
+  
 
 
-<div class="card">
- <div *ngFor= "let s of Data;" >
-       <mat-expansion-panel hideToggle>  
+  <div class="card">
+    <div *ngFor="let s of Data; let i=index">
+      <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
-           {{s.setName}} <div class="edit">
-            <button class="btn btn-sm btn-success" (click)= "onEdit(s.setName)">Edit</button>
-        </div> 
+            {{s.setName}}
           </mat-panel-title>
+          <mat-panel-description >
+            <div class="edit">
+              <button mat-stroked-button color="accent" class="btn btn-sm btn-success" (click)="onEdit(i)">Edit</button>
+            </div>
+          </mat-panel-description>
         </mat-expansion-panel-header>
         <p>{{s.setValue}}</p>
-      </mat-expansion-panel> 
-    </div></div><br>
+      </mat-expansion-panel>
+    </div>
+  </div><br>
 
 
 

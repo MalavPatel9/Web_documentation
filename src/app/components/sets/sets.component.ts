@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Data, Router } from '@angular/router';
 import { AddsetService } from 'src/app/services/addset.service';
 
 
@@ -11,7 +11,6 @@ import { AddsetService } from 'src/app/services/addset.service';
 })
 export class SetsComponent implements OnInit{
   Data=new Array<any>
- 
   
   constructor(private router:Router,private addsetService:AddsetService){}
   
@@ -23,9 +22,15 @@ console.log(this.Data);
   onclick(){
     this.router.navigate(['/home_1/addset'])
   }
-  onEdit(setName:any){
+  onEdit(i:number){
+     
+    // this.addsetService.getSetIdbyIndex(i)
+    this.router.navigate(['/home_1/edit',i])
 
  }
+
+
+
   }
 
 
