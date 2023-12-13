@@ -13,7 +13,7 @@ export class SetlistComponent {
 
   ngOnInit(): void {
     this.Data= this.addsetService.getarr()
-console.log(this.Data);
+
 
   }
 }

@@ -1,3 +1,5 @@
+
+<div style="background-color: azure;">
 <div class="pgbody">
   <header style="background-color: antiquewhite ; text-align: center;">
     <h1>Sets</h1>
@@ -16,8 +18,9 @@
             {{s.setName}}
           </mat-panel-title>
           <mat-panel-description >
-            <div class="edit">
-              <button mat-stroked-button color="accent" class="btn btn-sm btn-success" (click)="onEdit(i)">Edit</button>
+            <div class="btn1">
+              <button mat-raised-button color="primary" class="btn btn-sm btn-success" (click)="onEdit(i)">Edit</button>
+              <button mat-raised-button color="warn" class="btn btn-sm btn-success" (click)="onDelete(i)" style="margin-left: 2px;">Delete</button>
             </div>
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -29,4 +32,4 @@
 
 
 
-</div>
+</div></div>

@@ -1,4 +1,4 @@
-input.ng-touched.ng-invalid {
+.matInput.ng-touched.ng-invalid {
     border-color: red;
   }
 
@@ -7,4 +7,10 @@ input.ng-touched.ng-invalid {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+  }
+
+  table,th,td,tr{
+    border: 1px solid black;
+    height: 100%;
+    width: 50%;
   }

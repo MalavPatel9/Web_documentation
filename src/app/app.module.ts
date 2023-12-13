@@ -30,7 +30,6 @@ import { ImportComponent } from './components/import/import.component';
 import { SmartWorkflowComponent } from './components/smart-workflow/smart-workflow.component';
 import { ActivitySummaryComponent } from './components/activity-summary/activity-summary.component';
 import { ReportDashboardComponent } from './components/report-dashboard/report-dashboard.component';
-import { ExpenseGuard } from './expense.guard';
 import { ExpenseEntryComponent } from './expense-entry/expense-entry.component';
 import { ExpenseEntryListComponent } from './expense-entry-list/expense-entry-list.component';
 import { AdministrationComponent } from './components/administration/administration.component';
@@ -44,7 +43,8 @@ import { AddsetComponent } from './components/addset/addset.component';
 import { SetlistComponent } from './components/sets/setlist/setlist.component';
 import { SetsComponent } from './components/sets/sets.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { DxDataGridComponent } from 'devextreme-angular';
+
+import { AddsetService } from './services/addset.service';
 
 
 
@@ -111,7 +111,7 @@ import { DxDataGridComponent } from 'devextreme-angular';
     
 
   ],
-  providers: [],
+  providers: [AddsetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

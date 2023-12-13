@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { Data } from '@angular/router';
+import { Data } from './chart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class AddsetService {
   constructor() { }
   addsetData(addForm:any){
   this.arr.push(addForm)
-  console.log(this.arr)
+
   }
 
   updatesetData(id:number,addForm:any){
@@ -25,8 +25,29 @@ export class AddsetService {
   getSetIdbyIndex(i:number){
     return this.arr[i]
   }
-   
+
+findsetName(setNam:string){
+// let result = this.arr.findIndex((obj:any)=>obj.setName===setNam)
+// console.log(result);
+// if(result!==-1){
+
+// }
+  return this.arr.some((obj:any)=>obj.setName === setNam)
+}
   
+findsetIDandName(setName:string,setId:number){
+  // let ind=this.arr.findIndex((obj:any)=>obj.setName===setName) 
+  // console.log(ind ,"findindex");
+  
+  // let result= this.arr.some((obj:any)=>obj.setName===setName)
+  // if(result&&ind>=0&&ind!==setId){
+  // console.log(result,"resultfrom findsetIDandName",setId,this.arr)
 
+  let res=this.arr.findIndex((x: any, i: number) => x.setName == setName && i != setId) > -1
+   console.log(res, "get setidandname",setId);
+   return res
 
+  // }
+  // return false
+}
 }

@@ -16,7 +16,7 @@ export class SetsComponent implements OnInit{
   
   ngOnInit(): void {
     this.Data= this.addsetService.getarr()
-console.log(this.Data);
+
 
   }
   onclick(){
@@ -28,8 +28,9 @@ console.log(this.Data);
     this.router.navigate(['/home_1/edit',i])
 
  }
-
-
+ onDelete(i:number){
+  this.Data.splice(i,1)
+ }
 
   }
 

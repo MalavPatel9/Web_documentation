@@ -1,45 +1,59 @@
 
-
-<header style="background-color: antiquewhite ; text-align: center;"><h1>Add Set</h1></header>
-
-
-
-<div class="card"><div class="card-body">
-<h4 style="color: blue;"><b>Set Details</b></h4>
-<form [formGroup]="addForm"  (ngSubmit)="onSubmit()">
-
-    <mat-label>Set Name*</mat-label><br>
-    <input type="text" matInput formControlName="setName" placeholder="Enter Set Name Here" maxlength="50">
-    <mat-error *ngIf= "addForm.get('setName')?.hasError('required') && (addForm.get('setName')?.touched ||isSubmitted)"
-    class="Red_Color">
-    <strong>Set Name is  required</strong>
-  </mat-error><br>
+<header style="background-color: antiquewhite ; text-align: center;">
+  <h1>Add Set</h1>
+</header>
 
 
-  <mat-label>Set Value*</mat-label><br>
-    <input type="text" matInput formControlName="setValue" placeholder="Add Set Value Here" maxlength="50">
-    <mat-error *ngIf= "addForm.get('setValue')?.hasError('required') && (addForm.get('setValue')?.touched ||isSubmitted)"
-    class="Red_Color">
-    <strong>Set Value is  required</strong>
-  </mat-error><br>
+
+<div class="card" style="margin-left: 1px;">
+  <div class="card-body">
+    <h4 style="color: blue;"><b>Set Details</b></h4>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+      <mat-label>Set Name*</mat-label><br>
+      <input type="text" matInput formControlName="setName" placeholder="Enter Set Name Here" maxlength="50" >
+      <mat-error *ngIf="addForm.get('setName')?.hasError('required') && (addForm.get('setName')?.touched ||isSubmitted)"
+        class="Red_Color">
+        Set Name is required
+      </mat-error>
+      <mat-error *ngIf="addForm.get('setName')?.hasError('isDuplicate') && (addForm.get('setName')?.touched)" class="Red_Color">Set Name already Exists</mat-error><br>
+     
 
 
-  <button class="btn btn-primary" type="submit" >Save</button>
+      <mat-label>Set Value*</mat-label><br>
+      <input type="text" matInput [(ngModel)]="setValue" [ngModelOptions]="{standalone: true}"
+        placeholder="Add Set Value Here" maxlength="50">
+      <button type="button" (click)="onAddOption()" class="btn btn-primary" style="margin-left: 2px;">add</button>
+      <mat-error
+        *ngIf="addForm.get('setValue')?.hasError('required') && (addForm.get('setValue')?.touched ||isSubmitted)"
+        class="Red_Color">
+        Set Value is required
+      </mat-error>
+      <!-- <mat-error *ngIf="errormsg" style="color: red;"> Set Value is  required</mat-error> <br> -->
 
-  <mat-button-toggle type="button"  (click)="onReset()">Cancel</mat-button-toggle><br>
+      <table border="1">
+        <tr>
+          <th>Set Value</th>
+          <th>Action</th>
+        </tr>
 
-  
-</form>
+
+        <tr *ngFor="let option of options; let i=index">
+          <td>{{option}}</td>
+          <td><button  mat-flat-button color="primary" type="button" (click)="editOption(i)">edit</button>
+              <button mat-flat-button color="warn" type="button" (click)="deleteoption(i)" style="margin-left: 4px;">Delete</button>
+          </td>
+        </tr>
+
+      </table>
+      <br>
+
+
+      <button class="btn btn-primary" type="submit">Save</button>
+
+      <mat-button-toggle type="button" (click)="onReset()" style="margin-left: 4px;">Cancel</mat-button-toggle><br>
+
+
+    </form>
+  </div>
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
