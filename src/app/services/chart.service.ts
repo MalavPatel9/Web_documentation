@@ -31,7 +31,7 @@ const data: Data[] = [{
   text:'List of records not yet submitted for review and approval',
 }, 
 { ScheduledEvents:'Records Accessed',
-  Events: 0,
+  Events: 2,
   title:'Records you accessed today',
   text:'Records you`ve accessed or worked on today'
 }

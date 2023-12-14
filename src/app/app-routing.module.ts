@@ -13,7 +13,6 @@ import { ActivitySummaryComponent } from './components/activity-summary/activity
 import { ReportDashboardComponent } from './components/report-dashboard/report-dashboard.component';
 import { ExpenseEntryComponent } from './expense-entry/expense-entry.component'
 import { ExpenseEntryListComponent } from './expense-entry-list/expense-entry-list.component';
-import { ExpenseGuard } from './expense.guard';
 import { AdministrationComponent } from './components/administration/administration.component';
 import { Home1Component } from './home-1/home-1.component';
 import { SetsComponent } from './components/sets/sets.component';

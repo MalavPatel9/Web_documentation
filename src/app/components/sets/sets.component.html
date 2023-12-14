@@ -13,7 +13,7 @@
   <div class="card">
     <div *ngFor="let s of Data; let i=index">
       <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header> 
           <mat-panel-title>
             {{s.setName}}
           </mat-panel-title>
@@ -27,9 +27,14 @@
         <p>{{s.setValue}}</p>
       </mat-expansion-panel>
     </div>
+    <mat-paginator [length]="10"
+  [pageSize]="5"  
+  [pageSizeOptions]="[5]"
+  aria-label="Select page">
+</mat-paginator>
   </div><br>
 
 
-
+  
 
 </div></div>

@@ -44,7 +44,10 @@ import { SetlistComponent } from './components/sets/setlist/setlist.component';
 import { SetsComponent } from './components/sets/sets.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 
+
 import { AddsetService } from './services/addset.service';
+import { DatePipe, UpperCasePipe } from '@angular/common';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -75,7 +78,7 @@ import { AddsetService } from './services/addset.service';
     AddsetComponent,
     SetlistComponent,
     SetsComponent,
-    
+        
     
    
     
@@ -107,7 +110,11 @@ import { AddsetService } from './services/addset.service';
     DxChartModule,
     DxPieChartModule,
     MatExpansionModule,
-    DxDataGridModule
+    DxDataGridModule,
+    DatePipe,
+    UpperCasePipe,
+    MatPaginatorModule
+
     
 
   ],

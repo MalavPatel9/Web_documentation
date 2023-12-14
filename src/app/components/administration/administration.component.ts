@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./administration.component.scss']
 })
 export class AdministrationComponent {
-  constructor(private router:Router){}
+
+  Administration="Administration"
+       constructor(private router:Router){}
   onclick(){
     this.router.navigate(['home_1/set'])
   }

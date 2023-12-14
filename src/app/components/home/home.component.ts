@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { date } from '@rxweb/reactive-form-validators';
 import { ChartService,Data } from 'src/app/services/chart.service'
 
 
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   draft: any;
   ovedue: any;
   dataSource: any[];
-
+  Home=new Date(1988, 3, 15);
  constructor(public Chartservice:ChartService) {
   this.dataSource= this.Chartservice.getData()
 }
