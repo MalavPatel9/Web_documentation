@@ -39,7 +39,7 @@ import { ChartBarComponent } from './charts/chart-bar/chart-bar.component';
 import { Home1Component } from './home-1/home-1.component';
 import { SplineComponent } from './spline/spline.component';
 import { DxPieChartModule } from 'devextreme-angular';
-import { AddsetComponent } from './components/addset/addset.component';
+import { AddsetComponent } from './components/sets/addset/addset.component';
 import { SetlistComponent } from './components/sets/setlist/setlist.component';
 import { SetsComponent } from './components/sets/sets.component';
 import {MatExpansionModule} from '@angular/material/expansion';

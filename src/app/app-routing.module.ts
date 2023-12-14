@@ -16,7 +16,7 @@ import { ExpenseEntryListComponent } from './expense-entry-list/expense-entry-li
 import { AdministrationComponent } from './components/administration/administration.component';
 import { Home1Component } from './home-1/home-1.component';
 import { SetsComponent } from './components/sets/sets.component';
-import { AddsetComponent } from './components/addset/addset.component';
+import { AddsetComponent } from './components/sets/addset/addset.component';
 import { SetlistComponent } from './components/sets/setlist/setlist.component';
 
 
