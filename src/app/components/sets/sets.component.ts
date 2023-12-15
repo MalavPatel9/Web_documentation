@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 import { AddsetService } from 'src/app/services/addset.service';
 import {MatTableDataSource}from '@angular/material/table'
+import { Observable } from 'rxjs';
 
 
 
@@ -12,9 +13,9 @@ import {MatTableDataSource}from '@angular/material/table'
   styleUrls: ['./sets.component.scss']
 })
 export class SetsComponent implements OnInit{
-  Data=new Array<any>
-  datasource= new MatTableDataSource()
-  
+  Data:any[]=[]
+  datasource:MatTableDataSource<any>= new MatTableDataSource<any>(this.Data)
+  obs!: Observable<any>;
   
   constructor(private router:Router,private addsetService:AddsetService){}
   @ViewChild(MatPaginator,{ static: true })
@@ -22,8 +23,9 @@ export class SetsComponent implements OnInit{
   
   ngOnInit(): void {
     this.Data= this.addsetService.getarr()
-    this.datasource=new MatTableDataSource<any>(this.addsetService.arr)
+    this.datasource=new MatTableDataSource<any>(this.Data)
     this.datasource.paginator=this.paginator
+    this.obs=this.datasource.connect()
   }
   onclick(){
     this.router.navigate(['/home_1/addset'])
