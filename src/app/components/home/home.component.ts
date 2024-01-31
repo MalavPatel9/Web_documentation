@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { date } from '@rxweb/reactive-form-validators';
-import { ChartService,Data } from 'src/app/services/chart.service'
+import { ChartService } from 'src/app/services/chart.service'
 
 
 @Component({
